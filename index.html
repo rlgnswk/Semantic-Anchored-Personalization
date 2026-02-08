@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- Primary meta -->
+  <meta name="description" content="Project page for: Semantic Anchoring for Robust Personalization in Text-to-Image Diffusion Models (arXiv:2511.22245, 2025).">
+  <meta name="keywords" content="text-to-image diffusion, personalization, semantic anchoring, diffusion models, prior preservation, subject fidelity, arXiv">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Semantic Anchoring for Robust Personalization in Text-to-Image Diffusion Models (arXiv 2025)"/>
+  <meta property="og:description" content="Semantic anchoring guides personalization by grounding rare concepts in frequent counterparts for stable adaptation with improved fidelity and alignment."/>
+  <!-- TODO: Replace with your actual GitHub Pages URL -->
+  <meta property="og:url" content="https://YOUR_GITHUB_USERNAME.github.io/Semantic-Anchored-Personalization/"/>
+  <!-- Use a representative figure for social previews -->
+  <meta property="og:image" content="static/fig1.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Semantic Anchoring for Robust Personalization (arXiv 2025)">
+  <meta name="twitter:description" content="Stable diffusion personalization via semantic anchoring of rare concepts to frequent counterparts.">
+  <meta name="twitter:image" content="static/fig1.png">
+
+  <title>Semantic Anchoring for Robust Personalization</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+<style>
+  /* Keep layout stable; don't globally center all containers (it breaks Bulma layouts) */
+
+  /* IMPORTANT: don't force inline-block for everything named .item
+     because Bulma-carousel uses .item too. We'll keep non-carousel items centered differently. */
+  .item video { width: 1024px; height: 1024px; max-width: 100%; }
+  .small-text { font-size: 20px; }
+
+  /* Make figures roughly the same width as the abstract column (4/5 of max-desktop) */
+  .figure-wrap {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .figure-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Title line breaks + keep "Text-to-Image" together */
+  .publication-title{
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.15;
+  }
+  .nowrap{ white-space: nowrap; }
+
+  /* Captions centered */
+  .figure-caption,
+  .caption,
+  .subtitle.has-text-centered{
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content.has-text-justified .figure-caption,
+  .content.has-text-justified .caption,
+  .content.has-text-justified .subtitle.has-text-centered{
+    text-align: center !important;
+  }
+
+  /* ✅ FIX: center carousel items even when images are smaller than the max width */
+  .results-carousel .item {
+    width: 100% !important;         /* each slide takes full carousel width */
+    display: flex !important;       /* allow centering */
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .results-carousel .item .figure-wrap {
+    margin: 0 auto !important;      /* ensure inner figure is centered */
+  }
+
+  /* For non-carousel single-image sections, keep image centered without using .item inline-block */
+  .single-figure {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">
+            Semantic Anchoring for Robust Personalization in <span class="nowrap">Text-to-Image</span> Diffusion Models
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <!-- TODO: Replace scholar IDs -->
+              <a href="https://scholar.google.com/citations?user=YOUR_SEOYUN_SCHOLAR_ID" target="_blank">Seoyun Yang</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=YOUR_GIHOON_SCHOLAR_ID" target="_blank">Gihoon Kim</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=YOUR_TAESUP_SCHOLAR_ID" target="_blank">Taesup Kim</a><sup>&dagger;</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://arxiv.org/abs/2511.22245" target="_blank">arXiv 2025</a><br>
+              <small>Graduate School of Data Science, Seoul National University</small><br>
+              <small><sup>*</sup>Equal contribution. <sup>&dagger;</sup>Corresponding author.</small>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2511.22245" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <!-- TODO: Replace OWNER if needed -->
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/Semantic-Anchored-Personalization" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="POSTER_URL" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-image"></i></span>
+                  <span>Poster (Soon)</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TL;DR -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            <b>TL;DR:</b> We propose semantic anchoring for personalization, which guides adaptation by grounding a new concept in the distribution of its corresponding frequent counterpart.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conceptual Visualizations -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Conceptual Visualizations</h2>
+      <div class="single-figure">
+        <div class="figure-wrap">
+          <img src="static/fig1.png" alt="Conceptual illustration of semantic anchoring">
+        </div>
+      </div>
+      <!-- Optional caption
+      <p class="figure-caption">Figure: Conceptual illustration of semantic anchoring.</p>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-image diffusion models have achieved remarkable progress in generating diverse and realistic images from textual descriptions. However, they still struggle with personalization, which requires adapting a pretrained model to depict user-specific subjects from only a few reference images. The key challenge lies in learning a new visual concept from a limited number of reference images while preserving the pretrained semantic prior that maintains text-image alignment. When the model focuses on subject fidelity, it tends to overfit the limited reference images and fails to leverage the pretrained distribution. Conversely, emphasizing prior preservation maintains semantic consistency but prevents the model from learning new personalized attributes. Building on these observations, we propose the personalization process through a semantic anchoring that guides adaptation by grounding new concepts in their corresponding distributions. We therefore reformulate personalization as the process of learning a rare concept guided by its frequent counterpart through semantic anchoring. This anchoring encourages the model to adapt new concepts in a stable and controlled manner, expanding the pretrained distribution toward personalized regions while preserving its semantic structure. As a result, the proposed method achieves stable adaptation and consistent improvements in both subject fidelity and text–image alignment compared to baseline methods. Extensive experiments and ablation studies further demonstrate the robustness and effectiveness of the proposed anchoring strategy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visual Comparisons (carousel) -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Visual Comparisons</h2>
+      <div class="carousel results-carousel">
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/fig3.png" alt="Visual comparison figure 1">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/fig4.png" alt="Visual comparison figure 2">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quantitative Results (carousel) -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Quantitative Results</h2>
+      <div class="carousel results-carousel">
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/tab1.png" alt="Quantitative results table 1">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/tab2.png" alt="Quantitative results table 2">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ablation Studies (carousel) -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Ablation Studies</h2>
+      <div class="carousel results-carousel">
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/fig2.png" alt="Ablation study figure 1">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/fig5.png" alt="Ablation study figure 2">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/fig6.png" alt="Ablation study figure 3">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/fig7.png" alt="Ablation study figure 4">
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="figure-wrap">
+            <img src="static/fig8.png" alt="Ablation study figure 5">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre style="text-align: left;"><code>
+@misc{yang2025semantic,
+  title         = {Semantic Anchoring for Robust Personalization in Text-to-Image Diffusion Models},
+  author        = {Yang, Seoyun and Kim, Gihoon and Kim, Taesup},
+  year          = {2025},
+  eprint        = {2511.22245},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2511.22245}
+}
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+            which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Optional: show latest GitHub tag somewhere if you add an element with id="gitTagInfo"
+  // <p id="gitTagInfo"></p>
+  fetch('https://api.github.com/repos/YOUR_GITHUB_USERNAME/Semantic-Anchored-Personalization/tags')
+    .then(response => response.json())
+    .then(data => {
+      if (!data || data.length === 0) return;
+      var latestTag = data[0];
+      var el = document.getElementById('gitTagInfo');
+      if (el) el.innerHTML = `Latest Release: ${latestTag.name}`;
+    })
+    .catch(err => {
+      console.log('Failed to fetch tags:', err);
+    });
+</script>
+
+</body>
+</html>
